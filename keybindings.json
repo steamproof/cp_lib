@@ -1,0 +1,125 @@
+[
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "explorer.newFolder"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "copyFilePath"
+  },
+
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus"
+  },
+
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+
+  {
+    "key": "alt+`",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+`",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+
+  {
+    "key": "f6",
+    "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": {
+      "commands": [
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003cd \"${fileDirname}\"\u000D"
+          }
+        },
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003g++ \"${fileBasename}\" -o \"${fileBasenameNoExtension}.exe\" -O2 -pipe -std=c++20 -Wall -Wextra -Wshadow -DLOCAL\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  {
+    "key": "f5",
+    "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": {
+      "commands": [
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003cd \"${fileDirname}\"\u000D"
+          }
+        },
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003g++ \"${fileBasename}\" -o \"${fileBasenameNoExtension}.exe\" -O2 -pipe -std=c++20 -Wall -Wextra -Wshadow -DLOCAL && \"${fileBasenameNoExtension}.exe\"\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  {
+    "key": "ctrl+f5",
+    "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": {
+      "commands": [
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003cd \"${fileDirname}\" && \"${fileBasenameNoExtension}.exe\"\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  {
+    "key": "f7",
+    "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": {
+      "commands": [
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003cd \"${fileDirname}\" && wsl g++ \"${fileBasename}\" -o \"${fileBasenameNoExtension}.out\" -g -std=c++20 -DLOCAL && wsl gdb \"${fileBasenameNoExtension}.out\"\u000D"
+          }
+        }
+      ]
+    }
+  }
+]

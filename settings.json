@@ -1,0 +1,51 @@
+{
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 250,
+
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "none",
+    "extensions.ignoreRecommendations": true,
+    "telemetry.telemetryLevel": "off",
+
+    "editor.fontLigatures": false,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "editor.guides.bracketPairs": "active",
+
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoIndent": "advanced",
+
+    "editor.parameterHints.enabled": false,
+    "editor.hover.enabled": false,
+
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.snippetSuggestions": "top",
+    "editor.tabCompletion": "on",
+
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+
+    "explorer.incrementalNaming": "smart",
+
+    "C_Cpp.default.compilerPath": "g++",
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "C_Cpp.autoAddFileAssociations": false,
+    "C_Cpp.errorSquiggles": "enabled",
+
+    "files.associations": {
+        "*.h": "cpp",
+        "*.hpp": "cpp",
+        "*.cc": "cpp"
+    }
+}
